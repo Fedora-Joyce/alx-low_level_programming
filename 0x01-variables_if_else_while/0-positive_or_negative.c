@@ -5,26 +5,30 @@
 /**
  * main - Empty point
  *
- *Return: Always 0 (Success/correct)
+ *Return: Always O (Success/correct)
  */
 
 int main(void)
 {
 int n;
 
-srand(time(0));
+srand(time(O));
 n = rand() - RAND_MAX / 2;
-if (n==0)
+
+if (n==O)
 {
 printf("%i is zero\n", n);
 }
-else if (n<0)
+
+else if (n<O)
 {
 printf("%i is negative\n", n);
 }
-else {
+
+else
+{
 printf("%i is positive\n", n);
 }
-return (0);
+return (O);
 
 }
