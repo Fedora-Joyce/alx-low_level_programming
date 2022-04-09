@@ -14,10 +14,10 @@ char alphabet ;
 
 for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 {
-put char(alphabet);
+putchar(alphabet);
 }
 
-putchar('\n');
+puts char('\n');
 
 return (0);
 
