@@ -1,26 +1,12 @@
-#include "main.h"
-#include <stdio.h>
-/**
-* main - check the code
-*
-* print_to_98 - print all natural numbers from n to 98.
-* @n: te number to start counting from n to 98
-* Return: Always 0.
-*/
-
-void print_to_98(int n)
-{
-if (n < 98)
-{
-for (n = n; n < 98; n++)
-printf("%d, ", n);
-printf("%d\n" 98);
-}
-else
-{
-for (n = n; n > 98; n--)
-printf("%d, ", n);
-printf("%d\n", 98);
-}
-}
-
+int _putchar(char c);
+void print_alphabet(void);
+void print_aplhabet_x10(void);
+int _islower(int c);
+int _isalpha(int c);
+int print_sign(int n);
+int _abs(int);
+int print_last_digit(int);
+void jack_bauer(void);
+void times_table(void);
+int add(int, int);
+void print_to_98(int n);
