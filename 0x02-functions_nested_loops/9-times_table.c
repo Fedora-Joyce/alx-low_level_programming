@@ -4,10 +4,6 @@
  *
  * return: always 0.
  */
-int main(void)
-{times_table();
-	return (0);
-}
 
 void times_table(void)
 {
@@ -44,6 +40,8 @@ else
 }
 }
 _putchar ('\n');
+return (0);
+
 }
 }
 
