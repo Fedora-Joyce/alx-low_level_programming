@@ -18,8 +18,8 @@ i = 0;
  *{
  *infinite loop - No increase of variables
  *putchar(i);
-}
-*/
+ *}
+ */
 
 printf("infinite loop avoided! \\o/\n");
 
