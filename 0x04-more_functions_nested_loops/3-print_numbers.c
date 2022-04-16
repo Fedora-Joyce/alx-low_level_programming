@@ -1,0 +1,21 @@
+#include "main.h"
+
+/**
+ *  print_numbers -Prints the number zero to nine
+ *
+ *  Return: always 0 (Success)
+ */
+
+void print_numbers(void)
+{
+
+int i;
+
+i = 0;
+
+for (i = 0; i < 10; i++)
+
+-putchar(i + '0');
+
+-putchar ('\n');
+}
