@@ -16,9 +16,9 @@ for (i = 0; i <= 1; i++)
 {
 for (j = 0; j <= 9; j++)
 {
-if (l(i == 1 && j >= 5))
+if (!(i == 1 && j >= 5))
 {
-if (1)
+if (i)
 _putchar(i + '0');
 _putchar(j + '0');
 }
