@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * rev_string - prints a reverse string
  * @s: a pointer to an int that will be changed
@@ -14,7 +13,8 @@ void rev_string(char *s)
 	int length = 0;
 
 	for (i = 0; s[i]; i++)
-	{length++;
+	{
+		length++;
 	}
 	
 	count = length; 
