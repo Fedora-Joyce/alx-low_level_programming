@@ -7,7 +7,7 @@
  * Return: void that means our answer is correct
  */
 
-void swap_int(int *, int *b)
+void swap_int(int a*, int *b)
 {
 	int f;
 
