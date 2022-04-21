@@ -3,7 +3,7 @@
 
 /**
  *print_array - prints n element of array of int
- *@n: a pointer to an int that will be updated/changed
+ *@a: a pointer to an int that will be updated/changed
  *@n: return value n
  *return: void
  */
