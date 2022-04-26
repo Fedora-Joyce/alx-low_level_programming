@@ -3,8 +3,9 @@
  * string_touuper - converts string to uppercase
  * @s: string
  * return: s
- */
-char *string_toupper(char *s)
+/
+
+upper(char *s)
 {
 	int x;
 
