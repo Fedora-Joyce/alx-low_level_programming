@@ -1,6 +1,7 @@
 /**
 * _strcat - function that concatenates 
-* 		two strings
+* 	   two strings.
+*
 * @dest: pointer to destination input
 * @src: pointer to source input
 *
@@ -18,7 +19,7 @@ c++;
 for (c2 = 0; src[c2]; c2++)	
 /*append src[c2 to dest[c] while overwritting the null byte in dest*/
 dest[c++] = src[c2];
-return (dest)
+return (dest);
 }
 
 
