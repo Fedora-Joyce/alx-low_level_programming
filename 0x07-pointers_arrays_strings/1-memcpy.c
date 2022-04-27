@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _memcpy - copy memory area 
  * @dest: dest memory area
@@ -17,7 +16,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 		dest[a] = src[a];
 	}
 
-return (dest);
+	return (dest);
 
 }
 
