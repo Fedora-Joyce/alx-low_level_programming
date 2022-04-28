@@ -4,9 +4,10 @@
  *@n: pointer block of memory to fill 
  *Return: factorial
  */
+
 int factorial(int n)
 {
-if (n == 0) /*Base condtion*/
+if (n == 0) /*Base condition*/
 
 return (1);
 
