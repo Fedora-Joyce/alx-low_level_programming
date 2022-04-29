@@ -14,7 +14,7 @@ int is_prime_number(int n)
 		return (1);
 	return (prime(n, 2));
 {
-/
+/**
  * my_sqrt - returns sqrt of number
  * @x: number
  * @i: number acting as divisor
@@ -27,9 +27,9 @@ int is_prime_number(int n)
 
 square = i*i;
 if(square >= x)
-       return (i);
+return (i);
 else
-	return (my_sqrt(x, i + 1));
+return (my_sqrt(x, i + 1));
  }
 
  /**
@@ -40,12 +40,12 @@ else
   */
  int prime(int n, int d)
  {
-	 if (n % d == 0)
-		 return (0);
-	 else if (prime(n, 1) < d)
-		 return (1);
-	 else
-		 return(prime(n, d + 1));
+ if (n % d == 0)
+ return (0);
+ else if (prime(n, 1) < d)
+ return (1);
+ else
+ return(prime(n, d + 1));
 }
 
 
