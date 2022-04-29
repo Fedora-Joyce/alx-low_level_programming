@@ -30,14 +30,18 @@ return (-1);
 
 int _sqrt_recurstion(int n)
 {
-int i = 0;
 
-if (i < 0) /*If n is negative*/
-return (-1);
+	int i = 0;
 
-else
-{
-return (_evaluate(i, n)); /*Recursive call*/
-}
+	if (i < 0) /*If n is negative*/
+
+		return (-1);
+
+
+	else
+	{
+
+		return (_evaluate(i, n)); /*Recursive call*/
+	{
 
 }
