@@ -22,7 +22,9 @@ char *_memset(char *s, char b, unsigned int n)
 		s[i] = b;
 		i++;
 	}
+
 	return (s);
+
 }
 
 /**
@@ -130,5 +132,6 @@ int main(int argc, char *argv[])
 	}
 	else
 		multiply(n1, n2);
+
 	return (0);
 }
