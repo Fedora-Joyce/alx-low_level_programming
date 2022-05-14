@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "../function_pointers.h"
+#include "function_pointers.h"
 
 /**
  * print_name_as_is - prints a name as is
@@ -14,7 +14,6 @@ void print_name_as_is(char *name)
 
 /**
  * print_name_uppercase - print a name in uppercase
- *
  * @name: name of the person
  *
  * Return: Nothing.
@@ -40,7 +39,7 @@ void print_name_uppercase(char *name)
 }
 
 /**
- *  * main - check the code for ALX School students.
+ * main - check the code for ALX School students.
  *
  * Return: Always 0.
 */
