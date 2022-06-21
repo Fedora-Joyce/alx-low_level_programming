@@ -1,6 +1,6 @@
-#ifndef _OBJECT_LIKE_MACRO_H
-#define _OBJECT_LIKE_MACRO_H
+#ifndef OBJECT_LIKE_MACRO_H
+#define OBJECT_LIKE_MACRO_H
 
-#define BUFFER_SIZE 1024
-malloc(BUFFER_SIZE)
+#define SIZE 1024
 
+#endif
