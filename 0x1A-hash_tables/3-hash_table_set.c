@@ -1,76 +1,92 @@
 #include "hash_tables.h"
+
 /**
- * hash_table_set - adds an element to the hash table.
- * @ht: hash table
- * @key: is the key. key can not be an empty string
- * @value: value associated with the key.
- * value must be duplicated. value can be an empty string
- * Return: 1 on success, 0 on failurre
+ * hash_table_set - adds an element to the hash table
+ *
+ * @ht: the hash table to add element into
+ * @key: the key
+ * @value: the value associated with the key
+ * Return: 1 on succes, 0 otherwise
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-
-hash_node_t *node;
-hash_node_t *new_node;
+hash_node_t *new;
+hash_node_t *current;
 unsigned long int index;
 
-if (ht == NULL || *key == '\n' || *value == '\n')
-	return (0);
-
-index = key_index((const unsigned char *)key, ht->size);
-node = ht->array[index];
-
-if (node == NULL)
+if (ht == NULL)
+return (0);
+new = malloc(sizeof(hash_node_t));
+if (new == NULL)
+return (0);
+new->key = strdup(key);
+new->value = strdup(value);
+new->next = NULL;
+index = key_index((unsigned char *)key, ht->size);
+if (ht->array[index] == NULL)
 {
-	new_node = create_new_node(key, value);
-	if (new_node == NULL)
-		return (0);
-
-	ht->array[index] = new_node;
-	return (1);
+ht->array[index] = new;
 }
-
-/*If key exists, replace value*/
-while (node != NULL)
+else
 {
-	if (strcmp(key, node->key) == 0)
-	{
-		free(node->value);
-		node->value = strdup(value);
-		return (1);
-	}
-	node = node->next;
+current = ht->array[index];
+if (strcmp(key, current->key) == 0)
+{
+current->value = strdup(value);
 }
-/*If key doesn't exist, create new node*/
-new_node = create_new_node(key, value);
-if (new_node == NULL)
-	return (0);
-
-new_node->next = ht->array[index];
-ht->array[index] = new_node;
+else
+{
+ht->array[index] = new;
+new->next = current;
+}
+}
 return (1);
 }
 
+
 /**
- * create_new_node - create a new node
- * @key: is the key. key can not be an empty string
- * @value: value associated with the key.
- * value must be duplicated. value can be an empty string
- * Return: 1 on success, 0 on failurre
+ * _strdup - duplicates a string
+ * @str: The str to duplicate
+ *
+ * Return: pointer to the new str
  */
 
-hash_node_t *create_new_node (const char *key, const char *value)
+char *_strdup(const char *str)
 {
-	hash_node_t *new_node;
+int i, len;
+char *s;
+if (str == NULL)
+{
+return (NULL);
+}
+len = _strlen(str);
+s = malloc(sizeof(char) * (len + 1));
+if (s == NULL)
+{
+return (NULL);
+}
+for (i = 0; i < len; i++)
+{
+s[i] = str[i];
+}
+s[i] = '\0';
+return (s);
+}
 
-	new_node = malloc(sizeof(hash_node_t));
+/**
+ * _strlen - checks the length of a string
+ * @str: the string to check
+ *
+ * Return: the length of the string
+ */
 
-	if (new_node == NULL)
-		return (NULL);
+int _strlen(const char *str)
+{
+int len = 0;
 
-	new_node->key = strdup(key);
-	new_node->value = strdup(value);
-	new_node->next = NULL;
-
-	return (new_node);
+while (str[len] != '\0')
+{
+len++;
+}
+return (len);
 }
